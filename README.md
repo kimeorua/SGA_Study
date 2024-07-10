@@ -31,6 +31,35 @@
         }
         return answer;
     }
-    
     ```
+  + #### 풀이: num1, num2의 값을 if 문을 통해 조건에 부합 하는 지 확인 후, 부합하면 num1 - num2를 계산하여 answer에 저장하고, 반환 한다.
+
 + #### 문제 2.
+  + #### 문제: 정수 num1과 num2가 매개변수로 주어집니다. 두 수가 같으면 1 다르면 -1을 retrun하도록 solution 함수를 완성해주세요.
+  + #### 제한 사항: 0 ≤ num1 ≤ 10,000, 0 ≤ num2 ≤ 10,000
+  + #### 답:
+    ```cpp
+    #include <stdio.h>
+    #include <stdbool.h>
+    #include <stdlib.h>
+    
+    int solution(int num1, int num2) {
+        int answer = 0;
+        
+        if (num1 >= 0 && num1 <= 10000 && num2 >= 0 && num2 <= 10000)
+        {
+            answer = num1 == num2 ? 1 : -1;
+        }
+        
+        return answer;
+    }
+    ```
+  + #### 풀이: num1, num2의 값을 if 문을 통해 조건에 부합 하는 지 확인 후 부합하면 삼항 연산자를 통해 num1 과 num2가 같은지 비교하여 answer에 1, -1을 저장한 후 반환 한다.
+
++ #### 문제 3.
+  + #### 문제: 
+  + #### 제한 사항: 
+  + #### 답:
+    ```cpp
+    ```
+  + #### 풀이: 
