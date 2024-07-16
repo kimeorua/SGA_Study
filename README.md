@@ -4,7 +4,7 @@
 
 ### 목차
 + ### [1. 0LV 문제 및 풀이](#0LV-문제-및-풀이)
-+ ### [2. 1LV 문제 및 풀이]
++ ### [2. 1LV 문제 및 풀이](#1LV-문제-및-풀이)
 + ### [3. 2LV 문제 및 풀이]
 + ### [4. 3LV 문제 및 풀이]
 + ### [5. 4LV 문제 및 풀이]
@@ -116,4 +116,34 @@
     }
     ```
   + #### 풀이: 북쪽으로 이동한 거리를 north, 동쪽으로 이동한 거리를east에 각각 저장하여, N = north + 1, S = north - 1, E = east + 1, W = east - 1을 적용하여 해결 함
+
+
+## 1LV 문제 및 풀이
+
++ #### 문제 4.
+  + #### 문제: 빈 병 a개를 가져다주면 콜라 b병을 주는 마트가 있을 때, 빈 병 n개를 가져다주면 몇 병을 받을 수 있는지 계산하는 함수를 구현 하라. 단, 보유 중인 빈 병이 a개 미만이면, 추가적으로 빈 병을 받을 순 없다.
+  + #### 제한 사항: 1 ≤ b < a ≤ n ≤ 1,000,000, 정답은 항상 int 범위를 넘지 않게 주어집니다.
+  + #### 답:
+    ```cpp
+    #include <string>
+    #include <vector>
+    
+    using namespace std;
+    
+    int solution(int a, int b, int n) {
+        int answer = 0;
+        int current = n;
+        while(current >= a)
+        {
+            int set = current / a;
+            int give = set * a;
+            int gain = set * b;
+            current = current - give + gain;
+            answer += gain;
+        }
+        
+        return answer;
+    }
+    ```
+  + #### 풀이: 현재 병을 current에 저장하고, 빈병의 묶음을 계산하여, 가져가는 빈병과, 얻어가는 빈병을 계산, current - give + gain를 계산하여 조건을 확인후, answer에 더하여 반환 한다.
 
