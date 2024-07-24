@@ -7,8 +7,9 @@
 ## SGA 국비 교육 내용 정리
 + ### 24_07_24
   + #### 교육 내용: 무기 충돌 처리 및 데미지 처리 방식.
-  + #### 구현 방식: WeaponComponent에 델리게이트를 이용하여 Collision->OnComponentBeginOverlap을 호출하여 충돌 및 데미지 처리를 시작함.
-  + #### 또한, 
+  + #### WeaponComponent에 델리게이트를 이용하여 Collision->OnComponentBeginOverlap을 호출하여 충돌 및 데미지 처리를 시작함.
+  + #### HP와 같은 정보는 StatusComponent에서 F_Status 구조체의 변수를 가지고 있으며 해당 구조체는 현재HP 최대HP를 가지고 있음
+  + #### 현재 상태를 체크하는 StateComponent를 작성하고 E_State열거형을 통해 현재 상태를 확인 하여 정보를 처리함.
 
 ## 코딩테스트 문제 및 풀이
 
