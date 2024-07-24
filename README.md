@@ -147,3 +147,28 @@
     ```
   + #### 풀이: 현재 병을 current에 저장하고, 빈병의 묶음을 계산하여, 가져가는 빈병과, 얻어가는 빈병을 계산, current - give + gain를 계산하여 조건을 확인후, answer에 더하여 반환 한다.
 
+  + #### 문제 4.
+    + #### 문제: 자연수 n이 매개변수로 주어집니다. n을 x로 나눈 나머지가 1이 되도록 하는 가장 작은 자연수 x를 return 하도록 solution 함수를 완성해주세요. 답이 항상 존재함은 증명될 수 있습니다.
+    + #### 제한 사항: 3 ≤ n ≤ 1,000,000
+    + #### 답:
+      ```cpp
+      #include <string>
+      #include <vector>
+      
+      using namespace std;
+      
+      int solution(int n) {
+          int answer = 0;
+          vector<int> numV;
+          for (int i = n - 1 ; i > 0; i --)
+          {
+              if (n % i == 1) 
+              {
+                  numV.push_back(i);
+              }
+          }
+          answer = numV.back();
+          return answer;
+      }
+      ```
+    + #### 풀이: for 반복문을 통해 n-1 부터 1 까지의 수로 나머지를 계산, 나머지가 1인 i만 vector에 push_back함수를 통해 저장한다. 그후 가장 끝부분의 원소를 반환하면 가장 작은 수가 나온다.
