@@ -193,3 +193,28 @@
       }
       ```
     + #### 풀이: for 반복문을 통해 n-1 부터 1 까지의 수로 나머지를 계산, 나머지가 1인 i만 vector에 push_back함수를 통해 저장한다. 그후 가장 끝부분의 원소를 반환하면 가장 작은 수가 나온다.
+   
+  + #### 문제 3.
+  + #### 문제: 정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성해보세요.
+  + #### 제한 사항: arr은 길이 1 이상, 100 이하인 배열입니다, arr의 원소는 -10,000 이상 10,000 이하인 정수입니다.
+  + #### 답:
+    ```cpp
+    #include <string>
+    #include <vector>
+    
+    using namespace std;
+    
+    double solution(vector<int> arr) {
+        double answer = 0;
+        int count = 0;
+        
+        for (int x : arr)
+        {
+            answer += x;
+            count ++;
+        }
+        
+        return answer / count;
+    }
+    ```
+  + #### 풀이: 배열의 첫번째 인수부터 answer에 더한후 count를 늘려 최종적으로 answer / count를 반환 한다.
