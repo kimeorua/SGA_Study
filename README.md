@@ -40,7 +40,15 @@
     + #### AnimnotifyState에서는 Set을 활용하여 변수를 저장 할수 없으므로 BaseWeapon에 트레일을 제어 하기 위한 "파티클 시스템 위치 사용" 형의 변수를 추가함
     + #### AnimnotifyState Begin에서 SpawnEmiterAttach()함수를 통해 스폰 및 부착하고, BeginTrails함수를 통해 트래일을 재생 시키도록 구현함.
     + #### AnimnotifyState End에서 BaseWeapon에저장된 변수를 통해 EndTrails함수를 호출 하여 트레일을 종료 하도록 구현함
-      
+
++ ### 24_08_22
+  + #### EQS를 사용하여 도주하는 인공지능 제작
+  + #### EQ_FindCover를 작성하여 플레이어로부터 숨는 알고리즘을 작성함
+  + #### EQC로 EQS에 누구를 기준으로 동작하는지를 서술함
+  + #### Trace를 통해 플레이어에게 보이는지  filter를 통해 확인
+  + #### Distance를 통해 자기자신에서 가장 가까운 곳을 Score를 통해서 확인함.
+  + #### Pathfinding을 통해 이동할수 없는 위치를 제외함.
+  
 ## 코딩테스트 문제 및 풀이
 
 ### 레벨 별 풀이
